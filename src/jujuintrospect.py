@@ -27,7 +27,7 @@ class JujuIntrospect:
         """Stop service; Remove the systemd unit file for juju-introspect."""
         self.stop()
         if self.SVC_PATH.exists():
-            os.remove(str(self.SVC_PATH))
+            os.remove(self.SVC_PATH)
 
     def start(self):
         """Start and enable the juju-introspect service."""
