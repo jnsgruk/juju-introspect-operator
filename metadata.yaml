@@ -14,5 +14,5 @@ description: |
   consume the golang pprof endpoints.
 
 provides:
-  metrics-endpoint:
-    interface: prometheus_scrape
+  profiling-endpoint:
+    interface: parca_scrape

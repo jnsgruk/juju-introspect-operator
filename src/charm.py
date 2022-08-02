@@ -7,7 +7,7 @@
 import logging
 from subprocess import CalledProcessError, check_call
 
-from charms.prometheus_k8s.v0.prometheus_scrape import MetricsEndpointProvider
+from charms.parca.v0.parca_scrape import ProfilingEndpointProvider
 from ops.charm import CharmBase
 from ops.main import main
 from ops.model import ActiveStatus, MaintenanceStatus
@@ -28,7 +28,7 @@ class JujuIntrospectCharm(CharmBase):
 
         self.juju_introspect = JujuIntrospect()
 
-        self.metrics_endpoint = MetricsEndpointProvider(
+        self.profiling_endpoint = ProfilingEndpointProvider(
             self, jobs=[{"static_configs": [{"targets": ["*:6000"]}]}]
         )
 
