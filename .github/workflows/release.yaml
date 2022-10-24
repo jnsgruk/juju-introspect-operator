@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Check libs
-        uses: canonical/charming-actions/check-libraries@2.0.0
+        uses: canonical/charming-actions/check-libraries@2.1.1
         with:
           credentials: "${{ secrets.CHARMHUB_TOKEN }}"
           github-token: "${{ secrets.GITHUB_TOKEN }}"
@@ -74,6 +74,7 @@ jobs:
         uses: charmed-kubernetes/actions-operator@main
         with:
           provider: lxd
+          juju-channel: 3.0/stable
       - name: Run integration tests
         run: tox -e integration
 
@@ -92,10 +93,10 @@ jobs:
         with:
           fetch-depth: 0
       - name: Select charmhub channel
-        uses: canonical/charming-actions/channel@2.0.0
+        uses: canonical/charming-actions/channel@2.1.1
         id: channel
       - name: Upload charm to charmhub
-        uses: canonical/charming-actions/upload-charm@2.0.0
+        uses: canonical/charming-actions/upload-charm@2.1.1
         with:
           credentials: "${{ secrets.CHARMHUB_TOKEN }}"
           github-token: "${{ secrets.GITHUB_TOKEN }}"
