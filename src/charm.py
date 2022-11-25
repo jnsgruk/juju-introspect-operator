@@ -8,10 +8,11 @@ import logging
 from subprocess import CalledProcessError, check_call
 
 from charms.parca.v0.parca_scrape import ProfilingEndpointProvider
-from jujuintrospect import JujuIntrospect
 from ops.charm import CharmBase
 from ops.main import main
 from ops.model import ActiveStatus, MaintenanceStatus
+
+from jujuintrospect import JujuIntrospect
 
 logger = logging.getLogger(__name__)
 
