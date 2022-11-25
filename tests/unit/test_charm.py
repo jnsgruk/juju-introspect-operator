@@ -13,10 +13,9 @@ from subprocess import CalledProcessError
 from unittest.mock import patch
 
 import ops.testing
+from charm import JujuIntrospectCharm
 from ops.model import ActiveStatus, MaintenanceStatus
 from ops.testing import Harness
-
-from charm import JujuIntrospectCharm
 
 ops.testing.SIMULATE_CAN_CONNECT = True
 
