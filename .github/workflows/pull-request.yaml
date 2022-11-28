@@ -8,6 +8,9 @@ on:
       - ".github/workflows/renovate.yaml"
       - ".github/workflows/update-libs.yaml"
       - ".gitignore"
+  push:
+    branches:
+      - "renovate/*"
 
 jobs:
   test:
