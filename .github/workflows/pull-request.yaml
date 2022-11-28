@@ -10,7 +10,7 @@ on:
       - ".gitignore"
   push:
     branches:
-      - "renovate/*"
+      - "renovate/**"
 
 jobs:
   test:
